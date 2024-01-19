@@ -38,7 +38,7 @@ const Posts: React.FC = () => {
       <ScrollView
         contentContainerStyle={globalStyles.container}
         refreshControl={renderRefreshControl()}>
-        <Text>There is an error.</Text>
+        <Text style={globalStyles.text}>There is an error.</Text>
       </ScrollView>
     );
   }

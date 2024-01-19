@@ -3,6 +3,7 @@ import React, {useMemo} from 'react';
 
 import {formatHumanDate} from '../utils/date.util';
 
+import {colors} from '../theme/colors';
 import {IPost} from '../models/post.model';
 
 type Props = {post: IPost};
@@ -39,15 +40,15 @@ const Post: React.FC<Props> = ({post}) => {
 };
 
 const styles = StyleSheet.create({
-  likes: {fontWeight: 'bold', marginTop: 8},
+  likes: {fontWeight: 'bold', color: colors.text, marginTop: 8},
   ownerImage: {width: 50, height: 50, borderRadius: 25, marginRight: 16},
-  ownerName: {fontSize: 16, fontWeight: 'bold'},
+  ownerName: {fontSize: 16, fontWeight: 'bold', color: colors.text},
   postContainer: {flexDirection: 'row', marginBottom: 16, padding: 12},
   postContent: {flex: 1},
   postImage: {height: 200, marginBottom: 8, borderRadius: 8},
-  postText: {marginBottom: 8},
-  publishDate: {fontSize: 12, color: 'gray', marginBottom: 8},
-  tags: {fontSize: 12, color: 'blue'},
+  postText: {color: colors.text, marginBottom: 8},
+  publishDate: {fontSize: 12, color: colors.secondary, marginBottom: 8},
+  tags: {fontSize: 12, color: colors.blue},
 });
 
 export default React.memo(Post);
